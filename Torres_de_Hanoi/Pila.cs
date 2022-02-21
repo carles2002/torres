@@ -8,35 +8,80 @@ namespace Torres_de_Hanoi
 {
     class Pila
     {
-        public int Size { get; set; }
-        /* TODO: Elegir tipo de Top
-        public int Top { get; set; }
-        public String Top { get; set; }        
-        */
+
+
         /* TODO: Elegir tipo de Elementos
         public Disco[] Elementos { get; set; }
         public List<Disco> Elementos { get; set; }
         */
 
+        //Lista con los discos que hay en la pila
+        public List<Disco> objetos = new List<Disco>();
+
+        //Tamaño de la pila (discos que hay actualmente en la pila)
+        public int Size = 0;
+
+        //Disco que esta arriba de la pila
+        public int Top = 0;
+
+
         /* TODO: Implementar métodos */
+
+        //Constructor Pila Vacía
         public Pila()
         {
 
         }
 
+        //Constructor Pila con discos
+        public Pila(int discos)
+        {
+            this.Size = discos;
+            for (int i = 0; i < discos; i++)
+            {
+                Console.WriteLine($"Se ha creado un disco, num= {i}");
+
+                this.objetos.Add(new Disco(i));
+            }
+            this.Top = discos;
+        }
+
         public void push(Disco d)
         {
+            if(Size==objetos.Count())
+            {
+                Console.WriteLine("ERROR :La pila ya esta llena, se va a detener el programa");
+                Console.ReadKey();
+                Environment.Exit(1);
+            }
+            else
+            {
+                this.objetos.Add(d);
+                this.Top = d.tam;
 
+                Console.WriteLine("Se ha introducido un disco");
+            }
+           
+            
         }
 
         public Disco pop()
         {
             return null;
-        }                
+        }
 
         public bool isEmpty()
         {
             return true;
+        }
+
+        public void mostrar()
+        {
+            Console.WriteLine("Los objetos de la pila son:");
+            for (int i = 0; i < this.objetos.Count(); i++)
+            {
+                Console.WriteLine(objetos[i].tam);
+            }
         }
 
     }

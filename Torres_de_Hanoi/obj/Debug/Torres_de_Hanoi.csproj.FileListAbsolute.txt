@@ -1,0 +1,8 @@
+C:\Users\cmarfem\Source\Repos\carles2002\torres\Torres_de_Hanoi\bin\Debug\Torres_de_Hanoi.exe.config
+C:\Users\cmarfem\Source\Repos\carles2002\torres\Torres_de_Hanoi\bin\Debug\Torres_de_Hanoi.exe
+C:\Users\cmarfem\Source\Repos\carles2002\torres\Torres_de_Hanoi\bin\Debug\Torres_de_Hanoi.pdb
+C:\Users\cmarfem\Source\Repos\carles2002\torres\Torres_de_Hanoi\obj\Debug\Torres_de_Hanoi.csproj.AssemblyReference.cache
+C:\Users\cmarfem\Source\Repos\carles2002\torres\Torres_de_Hanoi\obj\Debug\Torres_de_Hanoi.csproj.SuggestedBindingRedirects.cache
+C:\Users\cmarfem\Source\Repos\carles2002\torres\Torres_de_Hanoi\obj\Debug\Torres_de_Hanoi.csproj.CoreCompileInputs.cache
+C:\Users\cmarfem\Source\Repos\carles2002\torres\Torres_de_Hanoi\obj\Debug\Torres_de_Hanoi.exe
+C:\Users\cmarfem\Source\Repos\carles2002\torres\Torres_de_Hanoi\obj\Debug\Torres_de_Hanoi.pdb
