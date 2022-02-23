@@ -31,11 +31,13 @@ namespace Torres_de_Hanoi
         //Constructor Pila Vacía
         public Pila()
         {
-
+            this.Size = 0;
+           // this.objetos.Add(new Disco(0));
+            this.objetos.Clear();
         }
 
-        //Constructor Pila con discos
-        public Pila(int discos, int debug)
+        //Constructor Pila con discos con huecos de mas para el debug
+        public Pila(int discos,int , int debug)
         {
             this.Size = discos + debug;
             for (int i = 0; i < discos; i++)
@@ -45,6 +47,22 @@ namespace Torres_de_Hanoi
                 this.objetos.Add(new Disco(i));
             }
             this.Top = discos;
+        }
+
+        //Constructor normal de Pila
+        public Pila(int discos,bool inicial)
+        {
+            this.Size = discos;
+            if (inicial)
+            {
+                for (int i = 0; i < discos; i++)
+                {
+                    Console.WriteLine($"Se ha creado un disco, num= {i}");
+
+                    this.objetos.Add(new Disco(i));
+                }
+                this.Top = discos;
+            }
         }
 
         //Coloca un disco en la pila

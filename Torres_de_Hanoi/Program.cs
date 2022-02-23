@@ -19,23 +19,21 @@ namespace Torres_de_Hanoi
            // Console.ReadKey();
 
            
-            Pila Inicio= new Pila(3,1);
+            Pila Inicio= new Pila(3);
            
-
             Inicio.mostrar();
 
-            Disco Test = new Disco(4);
-           
-            Inicio.push(Test);
-            Inicio.mostrar();
+            Pila Aux = new Pila();
+            Aux.mostrar();
 
-            Console.WriteLine(Inicio.isEmpty());
-
-            Console.WriteLine(Inicio.pop().tam);
-
-            Inicio.mostrar();
+            Hanoi Hanoi = new Hanoi();
+            Hanoi.mover_disco(Inicio, Aux);
+            Aux.mostrar();
 
             Console.ReadKey();
+
+             
+            
         }
     }
 }
