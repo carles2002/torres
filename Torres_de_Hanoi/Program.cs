@@ -16,10 +16,11 @@ namespace Torres_de_Hanoi
             // Console.ReadKey();
 
             Console.WriteLine("Pulse una tecla para iniciar el programa");
-            Console.ReadKey();
+           // Console.ReadKey();
 
            
-            Pila Inicio= new Pila(3);
+            Pila Inicio= new Pila(3,1);
+           
 
             Inicio.mostrar();
 
@@ -28,6 +29,11 @@ namespace Torres_de_Hanoi
             Inicio.push(Test);
             Inicio.mostrar();
 
+            Console.WriteLine(Inicio.isEmpty());
+
+            Console.WriteLine(Inicio.pop().tam);
+
+            Inicio.mostrar();
 
             Console.ReadKey();
         }

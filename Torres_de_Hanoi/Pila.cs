@@ -25,6 +25,7 @@ namespace Torres_de_Hanoi
         public int Top = 0;
 
 
+
         /* TODO: Implementar métodos */
 
         //Constructor Pila Vacía
@@ -34,9 +35,9 @@ namespace Torres_de_Hanoi
         }
 
         //Constructor Pila con discos
-        public Pila(int discos)
+        public Pila(int discos, int debug)
         {
-            this.Size = discos;
+            this.Size = discos + debug;
             for (int i = 0; i < discos; i++)
             {
                 Console.WriteLine($"Se ha creado un disco, num= {i}");
@@ -46,9 +47,10 @@ namespace Torres_de_Hanoi
             this.Top = discos;
         }
 
+        //Coloca un disco en la pila
         public void push(Disco d)
         {
-            if(Size==objetos.Count())
+            if (Size == objetos.Count())
             {
                 Console.WriteLine("ERROR :La pila ya esta llena, se va a detener el programa");
                 Console.ReadKey();
@@ -61,20 +63,33 @@ namespace Torres_de_Hanoi
 
                 Console.WriteLine("Se ha introducido un disco");
             }
-           
-            
+
+
         }
 
+        //Extrae el disco de la parte de arriba
         public Disco pop()
         {
-            return null;
+            Top = objetos[objetos.Count() - 2].tam;
+            Disco poped = objetos[objetos.Count() - 1];
+            objetos.RemoveAt(objetos.Count() - 1); 
+            return poped;
         }
 
+        //Mirar si la lista está vacía
         public bool isEmpty()
         {
-            return true;
+            if (this.objetos.Count() == 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
 
+        //Muestra los elementos de la pila
         public void mostrar()
         {
             Console.WriteLine("Los objetos de la pila son:");
