@@ -45,52 +45,129 @@ namespace Torres_de_Hanoi
             }
 
         }
+        //--------------------------------------------------------
+        //AQUÍ SE REALIZA EL ALGORITMO
+        //--------------------------------------------------------
 
-        public int iterativo(int n, Pila ini, Pila fin, Pila aux)
+        
+
+        public int iterativo(int n, Pila ini, Pila fin, Pila aux, bool paso)
         {
-            
-            int m = 0;
-            
-            //Si el numero de discos es impar
-            if (n % 2 != 0)
+            if (paso == false)
             {
+                int m = 0;
+
+                //Si el numero de discos es impar
+                if (n % 2 != 0)
+                {
+
+                    while (ini.isEmpty() == false || aux.isEmpty() == false)
+                    {
+
+                        m++;
+                        mover_disco(ini, fin);
+                        if (fin.objetos.Count() == n) { return m; };
+
+                        m++;
+                        mover_disco(ini, aux);
+                        if (fin.objetos.Count() == n) { return m; };
+
+                        m++;
+                        mover_disco(aux, fin);
+                        if (fin.objetos.Count() == n) { return m; };
+
+                    }
+                }
+
+                //Si el numero de discos es par
+                if (n % 2 == 0)
+                {
+                    while (ini.isEmpty() == false || aux.isEmpty() == false)
+                    {
+
+                        m++;
+                        mover_disco(ini, aux);
+                        if (fin.objetos.Count() == n) { return m; };
+
+                        m++;
+                        mover_disco(ini, fin);
+                        if (fin.objetos.Count() == n) { return m; };
+
+                        m++;
+                        mover_disco(aux, fin);
+                        if (fin.objetos.Count() == n) { return m; };
+
+
+                    }
+                }
+
+                return m;
+            }
+            //PASO ACTIVADO
+            else
+            {
+
                 
-                while( ini.isEmpty() == false || aux.isEmpty() == false)
+
+                int m = 0;
+
+                //Si el numero de discos es impar
+                if (n % 2 != 0)
                 {
-                    
-                    m++;
-                    mover_disco(ini, fin);
-                    
-                    m++;
-                    mover_disco(ini, aux);
-                    
-                    m++;
-                    mover_disco(aux, fin);
-                    
+
+                    while (ini.isEmpty() == false || aux.isEmpty() == false)
+                    {
+                        Console.Clear(); ini.mostrarC(aux,fin);
+                        Console.ReadKey();
+                        m++;
+                        mover_disco(ini, fin);
+                        if (fin.objetos.Count() == n) { return m; };
+
+                        Console.Clear(); ini.mostrarC(aux, fin);
+                        Console.ReadKey();
+                        m++;
+                        mover_disco(ini, aux);
+                        if (fin.objetos.Count() == n) { return m; };
+
+                        Console.Clear(); ini.mostrarC(aux, fin);
+                        Console.ReadKey();
+                        m++;
+                        mover_disco(aux, fin);
+                        if (fin.objetos.Count() == n) { return m; };
+
+                    }
                 }
+
+                //Si el numero de discos es par
+                if (n % 2 == 0)
+                {
+                    while (ini.isEmpty() == false || aux.isEmpty() == false)
+                    {
+                        Console.Clear(); ini.mostrarC(aux, fin);
+                        Console.ReadKey();
+                        m++;
+                        mover_disco(ini, aux);
+                        if (fin.objetos.Count() == n) { return m; };
+
+                        Console.Clear(); ini.mostrarC(aux, fin);
+                        Console.ReadKey();
+                        m++;
+                        mover_disco(ini, fin);
+                        if (fin.objetos.Count() == n) { return m; };
+
+                        Console.Clear(); ini.mostrarC(aux, fin);
+                        Console.ReadKey();
+                        m++;
+                        mover_disco(aux, fin);
+                        if (fin.objetos.Count() == n) { return m; };
+
+
+                    }
+                }
+
+                return m;
             }
             
-            //Si el numero de discos es par
-            if (n % 2 == 0)
-            {
-                while (ini.isEmpty() == false || aux.isEmpty() == false)
-                {
-                    
-                    m++;
-                    mover_disco(ini, aux);
-                    
-                    m++;
-                    mover_disco(ini, fin);
-                    
-                    m++;
-                    mover_disco(aux, fin);
-                    
-                    Console.ReadLine();
-
-                }
-            }
-
-            return m;
         }
 
     }

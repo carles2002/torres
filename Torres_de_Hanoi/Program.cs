@@ -11,6 +11,15 @@ namespace Torres_de_Hanoi
         static void Main(string[] args)
         {
             Console.WriteLine("Se ha iniciado el programa");
+            Console.WriteLine("¿Quiere activar la descripción de pasos?   s/n");
+            bool paso = false;
+            if (Console.ReadLine() == "s")
+            {
+                paso = true;
+                Console.Write("Se ha activado el paso");
+                Console.Write(" ");
+            }
+
             Console.WriteLine("¿Con cuantos discos quiere jugar?");
             int discos = int.Parse(Console.ReadLine());
             Console.WriteLine("Se van a crear " + discos + " discos");
@@ -25,13 +34,16 @@ namespace Torres_de_Hanoi
             Pila FIN = new Pila(discos, false);
             Hanoi hanoi = new Hanoi();
 
+            INI.mostrarC(AUX, FIN);
+            Console.ReadKey();
 
 
 
-            
 
 
-            Console.WriteLine(hanoi.iterativo(discos, INI, AUX, FIN));
+
+
+            Console.WriteLine("El numero de movimientos necesarios ha sido: "+hanoi.iterativo(discos, INI, AUX, FIN, paso));
 
             Console.ReadKey();
 

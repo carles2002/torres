@@ -91,7 +91,7 @@ namespace Torres_de_Hanoi
                 this.objetos.Add(d);
                 this.Top = d.tam;
 
-                
+
             }
 
 
@@ -100,10 +100,10 @@ namespace Torres_de_Hanoi
         //Extrae el disco de la parte de arriba
         public Disco pop()
         {
-            
+
             Disco poped = objetos[objetos.Count() - 1];
             objetos.RemoveAt(objetos.Count() - 1);
-               
+
             return poped;
         }
 
@@ -123,10 +123,43 @@ namespace Torres_de_Hanoi
         //Muestra los elementos de la pila
         public void mostrar(String pila)
         {
-            Console.WriteLine("Los objetos de la pila "+pila+" son:");
-            for (int i = this.objetos.Count()-1; i >= 0; i--)
+            Console.WriteLine("Los objetos de la pila " + pila + " son:");
+            for (int i = this.objetos.Count() - 1; i >= 0; i--)
             {
                 Console.WriteLine(objetos[i].tam);
+            }
+        }
+
+        //Muestra conjuntamente los elementos de las pilas
+        public void mostrarC(Pila a, Pila f)
+        {
+            Console.WriteLine("Los objetos de las pilas son:");
+            Console.WriteLine("INI");
+            for (int i = 0; i <= this.objetos.Count()-1; i++)
+            {
+                for(int j = this.objetos[i].tam; j >= 0; j--)
+                {
+                    Console.Write("-");
+                }
+                Console.WriteLine();
+            }
+            Console.WriteLine("AUX");
+            for (int i = 0; i <= a.objetos.Count() - 1; i++)
+            {
+                for (int j = a.objetos[i].tam; j >= 0; j--)
+                {
+                    Console.Write("-");
+                }
+                Console.WriteLine();
+            }
+            Console.WriteLine("FIN");
+            for (int i = 0; i <= f.objetos.Count() - 1; i++)
+            {
+                for (int j = f.objetos[i].tam; j >= 0; j--)
+                {
+                    Console.Write("-");
+                }
+                Console.WriteLine();
             }
         }
 
