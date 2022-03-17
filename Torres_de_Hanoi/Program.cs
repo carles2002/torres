@@ -17,7 +17,7 @@ namespace Torres_de_Hanoi
 
             Console.WriteLine("Pulse una tecla para iniciar el programa");
             // Console.ReadKey();
-            int discos = 3;
+            int discos = 4;
 
             Pila INI = new Pila(discos, true);
             Pila AUX = new Pila(discos, false);

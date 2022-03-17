@@ -100,9 +100,10 @@ namespace Torres_de_Hanoi
         //Extrae el disco de la parte de arriba
         public Disco pop()
         {
-            Top = objetos[objetos.Count() - 2].tam;
+            
             Disco poped = objetos[objetos.Count() - 1];
             objetos.RemoveAt(objetos.Count() - 1);
+               
             return poped;
         }
 
