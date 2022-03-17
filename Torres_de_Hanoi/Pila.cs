@@ -32,25 +32,33 @@ namespace Torres_de_Hanoi
         public Pila()
         {
             this.Size = 0;
-           // this.objetos.Add(new Disco(0));
+            // this.objetos.Add(new Disco(0));
             this.objetos.Clear();
         }
 
         //Constructor Pila con discos con huecos de mas para el debug
-        public Pila(int discos,int , int debug)
+        public Pila(int discos, bool inicial, int debug)
         {
-            this.Size = discos + debug;
-            for (int i = 0; i < discos; i++)
-            {
-                Console.WriteLine($"Se ha creado un disco, num= {i}");
 
-                this.objetos.Add(new Disco(i));
+            this.Size = discos + debug;
+            if (inicial)
+            {
+                for (int i = 0; i < discos; i++)
+                {
+                    Console.WriteLine($"Se ha creado un disco, num= {i}");
+
+                    this.objetos.Add(new Disco(i));
+                }
+                this.Top = discos;
             }
-            this.Top = discos;
+            else if (inicial == false)
+            {
+                this.Size = discos;
+            }
         }
 
         //Constructor normal de Pila
-        public Pila(int discos,bool inicial)
+        public Pila(int discos, bool inicial)
         {
             this.Size = discos;
             if (inicial)
@@ -62,6 +70,10 @@ namespace Torres_de_Hanoi
                     this.objetos.Add(new Disco(i));
                 }
                 this.Top = discos;
+            }
+            else if (inicial == false)
+            {
+                this.Size = discos;
             }
         }
 
@@ -90,7 +102,7 @@ namespace Torres_de_Hanoi
         {
             Top = objetos[objetos.Count() - 2].tam;
             Disco poped = objetos[objetos.Count() - 1];
-            objetos.RemoveAt(objetos.Count() - 1); 
+            objetos.RemoveAt(objetos.Count() - 1);
             return poped;
         }
 
@@ -108,10 +120,10 @@ namespace Torres_de_Hanoi
         }
 
         //Muestra los elementos de la pila
-        public void mostrar()
+        public void mostrar(String pila)
         {
-            Console.WriteLine("Los objetos de la pila son:");
-            for (int i = 0; i < this.objetos.Count(); i++)
+            Console.WriteLine("Los objetos de la pila "+pila+" son:");
+            for (int i = this.objetos.Count()-1; i >= 0; i--)
             {
                 Console.WriteLine(objetos[i].tam);
             }

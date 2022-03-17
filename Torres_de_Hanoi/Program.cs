@@ -16,24 +16,26 @@ namespace Torres_de_Hanoi
             // Console.ReadKey();
 
             Console.WriteLine("Pulse una tecla para iniciar el programa");
-           // Console.ReadKey();
+            // Console.ReadKey();
+            int discos = 3;
 
-           
-            Pila Inicio= new Pila(3);
-           
-            Inicio.mostrar();
+            Pila INI = new Pila(discos, true);
+            Pila AUX = new Pila(discos, false);
+            Pila FIN = new Pila(discos, false);
+            Hanoi hanoi = new Hanoi();
 
-            Pila Aux = new Pila();
-            Aux.mostrar();
 
-            Hanoi Hanoi = new Hanoi();
-            Hanoi.mover_disco(Inicio, Aux);
-            Aux.mostrar();
+
+
+            
+
+
+            Console.WriteLine(hanoi.iterativo(discos, INI, AUX, FIN));
 
             Console.ReadKey();
 
-             
-            
+
+
         }
     }
 }
