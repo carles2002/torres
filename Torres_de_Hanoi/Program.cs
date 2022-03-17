@@ -10,14 +10,15 @@ namespace Torres_de_Hanoi
     {
         static void Main(string[] args)
         {
-
-            // Keep the console window open in debug mode.
-            //  Console.WriteLine("Press any key to exit.");
-            // Console.ReadKey();
-
-            Console.WriteLine("Pulse una tecla para iniciar el programa");
-            // Console.ReadKey();
-            int discos = 4;
+            Console.WriteLine("Se ha iniciado el programa");
+            Console.WriteLine("¿Con cuantos discos quiere jugar?");
+            int discos = int.Parse(Console.ReadLine());
+            Console.WriteLine("Se van a crear " + discos + " discos");
+            Console.WriteLine("¿Empezar el juego?   s/n");
+            if (Console.ReadLine() == "n")
+            {
+                Environment.Exit(1);
+            }
 
             Pila INI = new Pila(discos, true);
             Pila AUX = new Pila(discos, false);

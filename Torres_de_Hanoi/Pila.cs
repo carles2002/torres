@@ -45,7 +45,7 @@ namespace Torres_de_Hanoi
             {
                 for (int i = 0; i < discos; i++)
                 {
-                    Console.WriteLine($"Se ha creado un disco, num= {i}");
+                    //Console.WriteLine($"Se ha creado un disco, num= {i}");
 
                     this.objetos.Add(new Disco(i));
                 }
@@ -65,7 +65,7 @@ namespace Torres_de_Hanoi
             {
                 for (int i = 0; i < discos; i++)
                 {
-                    Console.WriteLine($"Se ha creado un disco, num= {i}");
+                    //Console.WriteLine($"Se ha creado un disco, num= {i}");
 
                     this.objetos.Add(new Disco(i));
                 }
@@ -91,7 +91,7 @@ namespace Torres_de_Hanoi
                 this.objetos.Add(d);
                 this.Top = d.tam;
 
-                Console.WriteLine("Se ha introducido un disco");
+                
             }
 
 
