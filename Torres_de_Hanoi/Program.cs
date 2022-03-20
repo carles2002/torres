@@ -34,8 +34,8 @@ namespace Torres_de_Hanoi
             Pila FIN = new Pila(discos, false);
             Hanoi hanoi = new Hanoi();
 
-            INI.mostrarC(AUX, FIN);
-            Console.ReadKey();
+            
+            
 
 
 
@@ -44,7 +44,7 @@ namespace Torres_de_Hanoi
 
 
             Console.WriteLine("El numero de movimientos necesarios ha sido: "+hanoi.iterativo(discos, INI, AUX, FIN, paso));
-
+            //INI.mostrarC(AUX, FIN);
             Console.ReadKey();
 
 

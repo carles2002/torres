@@ -64,16 +64,19 @@ namespace Torres_de_Hanoi
                     while (ini.isEmpty() == false || aux.isEmpty() == false)
                     {
 
-                        m++;
+                        
                         mover_disco(ini, fin);
+                        m++;
                         if (fin.objetos.Count() == n) { return m; };
 
-                        m++;
+                        
                         mover_disco(ini, aux);
+                        m++;
                         if (fin.objetos.Count() == n) { return m; };
 
-                        m++;
+                        
                         mover_disco(aux, fin);
+                        m++;
                         if (fin.objetos.Count() == n) { return m; };
 
                     }
@@ -85,16 +88,19 @@ namespace Torres_de_Hanoi
                     while (ini.isEmpty() == false || aux.isEmpty() == false)
                     {
 
-                        m++;
+                        
                         mover_disco(ini, aux);
+                        m++;
                         if (fin.objetos.Count() == n) { return m; };
 
-                        m++;
+                        
                         mover_disco(ini, fin);
+                        m++;
                         if (fin.objetos.Count() == n) { return m; };
 
-                        m++;
+                        
                         mover_disco(aux, fin);
+                        m++;
                         if (fin.objetos.Count() == n) { return m; };
 
 
@@ -119,20 +125,23 @@ namespace Torres_de_Hanoi
                     {
                         Console.Clear(); ini.mostrarC(aux,fin);
                         Console.ReadKey();
-                        m++;
+                        
                         mover_disco(ini, fin);
+                        m++;
                         if (fin.objetos.Count() == n) { return m; };
 
                         Console.Clear(); ini.mostrarC(aux, fin);
                         Console.ReadKey();
-                        m++;
+                        
                         mover_disco(ini, aux);
+                        m++;
                         if (fin.objetos.Count() == n) { return m; };
 
                         Console.Clear(); ini.mostrarC(aux, fin);
                         Console.ReadKey();
-                        m++;
+                        
                         mover_disco(aux, fin);
+                        m++;
                         if (fin.objetos.Count() == n) { return m; };
 
                     }
@@ -145,26 +154,29 @@ namespace Torres_de_Hanoi
                     {
                         Console.Clear(); ini.mostrarC(aux, fin);
                         Console.ReadKey();
-                        m++;
+                        
                         mover_disco(ini, aux);
+                        m++;
                         if (fin.objetos.Count() == n) { return m; };
 
                         Console.Clear(); ini.mostrarC(aux, fin);
                         Console.ReadKey();
-                        m++;
+                        
                         mover_disco(ini, fin);
+                        m++;
                         if (fin.objetos.Count() == n) { return m; };
 
                         Console.Clear(); ini.mostrarC(aux, fin);
                         Console.ReadKey();
-                        m++;
+                        
                         mover_disco(aux, fin);
+                        m++;
                         if (fin.objetos.Count() == n) { return m; };
 
 
                     }
                 }
-
+                
                 return m;
             }
             
