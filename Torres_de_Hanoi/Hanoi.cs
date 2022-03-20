@@ -67,17 +67,20 @@ namespace Torres_de_Hanoi
                         
                         mover_disco(ini, fin);
                         m++;
-                        if (fin.objetos.Count() == n) { return m; };
+                        Console.Write(".");
+                        if (fin.objetos.Count() == n) { Console.Clear(); return m; };
 
                         
                         mover_disco(ini, aux);
                         m++;
-                        if (fin.objetos.Count() == n) { return m; };
+                        Console.Write(".");
+                        if (fin.objetos.Count() == n) { Console.Clear(); return m; };
 
                         
                         mover_disco(aux, fin);
                         m++;
-                        if (fin.objetos.Count() == n) { return m; };
+                        Console.Write(".");
+                        if (fin.objetos.Count() == n) { Console.Clear(); return m; };
 
                     }
                 }
@@ -91,17 +94,20 @@ namespace Torres_de_Hanoi
                         
                         mover_disco(ini, aux);
                         m++;
-                        if (fin.objetos.Count() == n) { return m; };
+                        Console.Write(".");
+                        if (fin.objetos.Count() == n) { Console.Clear(); return m; };
 
                         
                         mover_disco(ini, fin);
                         m++;
-                        if (fin.objetos.Count() == n) { return m; };
+                        Console.Write(".");
+                        if (fin.objetos.Count() == n) { Console.Clear(); return m; };
 
                         
                         mover_disco(aux, fin);
                         m++;
-                        if (fin.objetos.Count() == n) { return m; };
+                        Console.Write(".");
+                        if (fin.objetos.Count() == n) { Console.Clear(); return m; };
 
 
                     }
@@ -109,7 +115,7 @@ namespace Torres_de_Hanoi
 
                 return m;
             }
-            //PASO ACTIVADO
+            //PASO ACTIVADO --------------------------------------------------------------------
             else
             {
 
@@ -128,21 +134,21 @@ namespace Torres_de_Hanoi
                         
                         mover_disco(ini, fin);
                         m++;
-                        if (fin.objetos.Count() == n) { return m; };
+                        if (fin.objetos.Count() == n) { Console.Clear(); ini.mostrarC(aux, fin); return m; };
 
                         Console.Clear(); ini.mostrarC(aux, fin);
                         Console.ReadKey();
                         
                         mover_disco(ini, aux);
                         m++;
-                        if (fin.objetos.Count() == n) { return m; };
+                        if (fin.objetos.Count() == n) { Console.Clear(); ini.mostrarC(aux, fin); return m; };
 
                         Console.Clear(); ini.mostrarC(aux, fin);
                         Console.ReadKey();
                         
                         mover_disco(aux, fin);
                         m++;
-                        if (fin.objetos.Count() == n) { return m; };
+                        if (fin.objetos.Count() == n) { Console.Clear(); ini.mostrarC(aux, fin); return m; };
 
                     }
                 }
@@ -157,21 +163,21 @@ namespace Torres_de_Hanoi
                         
                         mover_disco(ini, aux);
                         m++;
-                        if (fin.objetos.Count() == n) { return m; };
+                        if (fin.objetos.Count() == n) { Console.Clear(); ini.mostrarC(aux, fin); return m; };
 
                         Console.Clear(); ini.mostrarC(aux, fin);
                         Console.ReadKey();
                         
                         mover_disco(ini, fin);
                         m++;
-                        if (fin.objetos.Count() == n) { return m; };
+                        if (fin.objetos.Count() == n) { Console.Clear(); ini.mostrarC(aux, fin); return m; };
 
                         Console.Clear(); ini.mostrarC(aux, fin);
                         Console.ReadKey();
                         
                         mover_disco(aux, fin);
                         m++;
-                        if (fin.objetos.Count() == n) { return m; };
+                        if (fin.objetos.Count() == n) { Console.Clear(); ini.mostrarC(aux, fin); return m; };
 
 
                     }

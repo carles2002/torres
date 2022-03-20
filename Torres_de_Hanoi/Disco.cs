@@ -14,7 +14,7 @@ namespace Torres_de_Hanoi
         public Disco(int tamano)
         {
             this.tam = tamano;
-            Console.WriteLine($"Se ha creado el disco con el tamaño {this.tam}");
+            //Console.WriteLine($"Se ha creado el disco con el tamaño {this.tam}");
         }
 
     }
